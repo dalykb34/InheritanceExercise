@@ -28,6 +28,30 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            var myBird = new Bird();
+            myBird.canFly = true;
+            myBird.doesSwim = true;
+            myBird.migrationDirection = "SouthEast";
+            myBird.isCarnivore = true;
+            myBird.name = "Loon";
+
+            var snake = new Reptile();
+            snake.hasShell = false;
+            snake.isPoisonous = true;
+            snake.hasFangs = true;
+            snake.makesNoise = "sshhhhsh-hish";
+            snake.name = "Cobra";
+
+            var myAnimals = new Animal[] { myBird, snake };
+
+            foreach(var animal in myAnimals)
+            {
+                Console.WriteLine($"Name: {animal.name}");
+                Console.WriteLine($"It has {animal.numberOfLegs} legs");
+                Console.WriteLine($"{snake.makesNoise}");
+                Console.WriteLine($"{myBird.isCarnivore}");
+            }
+
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Bird class
